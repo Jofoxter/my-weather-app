@@ -111,3 +111,17 @@ h2 {
 .min-temp {
   font-weight: lighter;
 }
+.my-name {
+  color: rgb(112, 112, 112, 0.9);
+}
+.open-source {
+  text-underline-offset: unset;
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+.github {
+  position: relative;
+  top: -400px;
+  left: 450px;
+}
