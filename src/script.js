@@ -36,12 +36,10 @@ function search(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
-//with above instruction I can chose a city, press search and have the city name changed plus day and time and alert in case no text is written
-
 function showTemperature(response) {
   let h2 = document.querySelector("#city");
   h2.innerHTML = response.data.name;
-  //if I cancel the 2 lines above everything work apart the "Croglio" name where I am that not show up
+
   let temperature = Math.round(response.data.main.temp);
   let actualTemperature = document.querySelector("#temperature");
   actualTemperature.innerHTML = `${temperature}`;
@@ -63,8 +61,6 @@ function searchCity(city) {
   axios.get(apiUrl).then(showTemperature);
 }
 
-//with above function I can search the city and get real time data for each selection
-
 function showPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
@@ -81,5 +77,3 @@ function getCurrentPosition(event) {
 
 let button = document.querySelector("#show-current-position");
 button.addEventListener("click", getCurrentPosition);
-
-//with above function I can get my local position weather condition.
